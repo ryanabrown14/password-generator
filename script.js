@@ -67,3 +67,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+//I'm not sure why this is giving me an error message^^
