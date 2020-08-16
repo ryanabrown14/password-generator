@@ -1,6 +1,6 @@
 // Assignment code here
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var number = ["1","2","3","4","5","6","7","8","9","0"];
 var symbol = ["!","@","#","$","%","^","&","*","(",")","-","+"];
 
@@ -29,19 +29,26 @@ if (!upperCaseConfirm && !lowerCaseConfirm && !numberConfirm && !symbolConfirm){
 
 var passwordChar = []
 if (upperCaseConfirm){
-  passwordChar= //need a link of some sort
+  passwordChar= passwordChar.concat(upperCase)
 }
 if (lowerCaseConfirm) {
-  passwordChar= //need link
+  passwordChar= passwordChar.concat(lowerCase)
 
 }
 if (numberConfirm){
-  passwordChar= //need link
+  passwordChar= passwordChar.concat(number)
 }
 if (symbolConfirm){
-  passwordChar = //need link 
+  passwordChar = passwordChar.concat(symbol)
 }
-};
+
+var randomPassword = ""
+for (var i = 0; i < passwordLengthConfirm; i++) {
+  randomPassword = randomPassword + passwordChar[Math.floor(Math.random() * passwordChar.length)];
+  
+}
+return randomPassword;
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
